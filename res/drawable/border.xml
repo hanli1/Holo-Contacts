@@ -5,8 +5,8 @@
     <solid android:color="#80FFFFFF" />
 
     <stroke
-        android:width="2dp"
-        android:color="#101010" />
+        android:width="10dp"
+        android:color="#A8A8A8" />
 
     <padding
         android:bottom="1dp"

@@ -4,5 +4,7 @@
     <string name="app_name">Holo Contacts</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+   	<string name="widget4x1">Holo Contacts 4x1</string>
+   	<string name="widget4x2">Holo Contacts 4x2</string>
 
 </resources>
