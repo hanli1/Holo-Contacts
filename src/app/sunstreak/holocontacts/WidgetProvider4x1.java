@@ -28,6 +28,8 @@ public class WidgetProvider4x1 extends AppWidgetProvider {
 	public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
 		final int N = appWidgetIds.length;
 		this.context = context;
+//		Intent service= new Intent(context, PhoneService.class);
+//		context.startService(service);
 		Contact[] data = getCallDetails();
 		// Perform this loop procedure for each App Widget that belongs to this provider
 		for (int i=0; i<N; i++) {

@@ -10,8 +10,8 @@
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.READ_CALL_LOG" >
-    </uses-permission>
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -28,7 +28,9 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name="WidgetProvider4x1" android:label="@string/widget4x1">
+        <receiver
+            android:name=".WidgetProvider4x1"
+            android:label="@string/widget4x1" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -37,7 +39,9 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_provider_4x1" />
         </receiver>
-        <receiver android:name="WidgetProvider4x2" android:label="@string/widget4x2">
+        <receiver
+            android:name=".WidgetProvider4x2"
+            android:label="@string/widget4x2" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -45,6 +49,17 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_provider_4x2" />
+        </receiver>
+
+        <service
+            android:name=".PhoneService"
+            android:label="Phone Service" >
+        </service>
+
+        <receiver android:name=".CallReciever" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
         </receiver>
     </application>
 
