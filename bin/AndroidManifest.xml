@@ -56,7 +56,7 @@
             android:label="Phone Service" >
         </service>
 
-        <receiver android:name=".CallReciever" >
+        <receiver android:name=".CallReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.PHONE_STATE" />
             </intent-filter>

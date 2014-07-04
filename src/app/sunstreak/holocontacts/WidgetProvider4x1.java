@@ -13,7 +13,6 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Shader.TileMode;
 import android.net.Uri;
@@ -26,6 +25,8 @@ import android.widget.RemoteViews;
 public class WidgetProvider4x1 extends AppWidgetProvider {
 	private Context context;
 	public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
+
+		
 		final int N = appWidgetIds.length;
 		this.context = context;
 //		Intent service= new Intent(context, PhoneService.class);
@@ -63,6 +64,7 @@ public class WidgetProvider4x1 extends AppWidgetProvider {
 	}
 	public void onReceive(Context context, Intent intent)
 	{
+		super.onReceive(context, intent);
 		super.onReceive(context, intent);
 	}
 	private Contact[] getCallDetails() {
